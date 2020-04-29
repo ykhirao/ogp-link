@@ -1,0 +1,27 @@
+{
+    "name": "ogp-link",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {
+        "aws-sdk": "^2.665.0"
+    },
+    "scripts": {
+        "zip": "zip -r lambda.zip *.js -x node_modules/\\* yarn.lock package.json package-lock.lson lambda.zip",
+        "update": "aws lambda update-function-code --publish --function-name ogp-link --zip-file fileb://`pwd`/lambda.zip",
+        "deploy": "npm run zip && npm run update",
+        "check-functions": "aws lambda list-functions"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ykhirao/ogp-link.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ykhirao/ogp-link/issues"
+    },
+    "homepage": "https://github.com/ykhirao/ogp-link#readme"
+}
