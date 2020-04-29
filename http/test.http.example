@@ -1,0 +1,17 @@
+### hot to use
+### `$ cp test.http.example test.http`
+
+### 
+
+POST https://XXXX.amazonaws.com/beta1/v1/ogp HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+
+
+
+
