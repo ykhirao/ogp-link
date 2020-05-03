@@ -5,7 +5,7 @@ exports.create = async (dynamo) => {
     // const id = '1'
 
     var params = {
-        TableName: 'OGP-LINK',
+        TableName: 'Links',
         Item: {
             id,
             ttl,
