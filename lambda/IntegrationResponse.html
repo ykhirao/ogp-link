@@ -1,0 +1,24 @@
+#set($property = $input.path('$.property'))
+<!--  -->
+#set($name = $input.path('$.name'))
+
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+    <head>
+        <title>OGP links | SNS用画像付きリンクサイト</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- *** リダイレクト設定 *********** -->
+        <meta http-equiv="refresh" content='0; URL="$property[og:url]"' />
+
+        <!-- *** 必須項目 *********** -->
+        <meta property="og:title" content="タイトル" />
+        #foreach($key in $property.keySet())
+        <meta property="$key" content="${property.get($key)" />
+        #end
+
+        <!-- <meta name="twitter:creator" content="@yk_hirao" /> -->
+    </head>
+    <body></body>
+</html>

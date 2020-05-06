@@ -1,0 +1,16 @@
+{
+    "redirect": "https://www.google.com/",
+    "property": {
+        "og:title": "グーグルへのリンク",
+        "og:type": "toppage",
+        "og:url": "https://www.google.com/",
+        "og:image": "https://i.gyazo.com/58ef1fb88f345866f8144c1b57ca9d38.png",
+        "og:description": "グーグルというサイトはとても便利な検索サイトで、さらにアルファベットという組織がさまざまなサービスを展開している。",
+        "fb:app_id": ""
+    },
+    "name": {
+        "twitter:card": "summary",
+        "twitter:site": "@yk_hirao",
+        "twitter:creator": "@yk_hirao"
+    }
+}
