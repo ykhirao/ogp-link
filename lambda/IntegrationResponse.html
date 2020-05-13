@@ -1,24 +1,35 @@
-#set($property = $input.path('$.property'))
-<!--  -->
-#set($name = $input.path('$.name'))
+#set($inputRoot = $input.path('$'))
 
-<!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns#">
-    <head>
-        <title>OGP links | SNS用画像付きリンクサイト</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- {
+  "redirect": "https://www.google.com/",
+  "property": {
+      "og:title": "グーグルへのリンク",
+      "og:type": "toppage",
+      "og:url": "https://www.google.com/",
+      "og:image": "https://i.gyazo.com/58ef1fb88f345866f8144c1b57ca9d38.png",
+      "og:description": "グーグルというサイトはとても便利な検索サイトで、さらにアルファベットという組織がさまざまなサービスを展開している。",
+      "fb:app_id": ""
+  },
+  "name": {
+      "twitter:card": "summary",
+      "twitter:site": "@yk_hirao",
+      "twitter:creator": "@yk_hirao"
+  }
+} -->
 
-        <!-- *** リダイレクト設定 *********** -->
-        <meta http-equiv="refresh" content='0; URL="$property[og:url]"' />
-
-        <!-- *** 必須項目 *********** -->
-        <meta property="og:title" content="タイトル" />
-        #foreach($key in $property.keySet())
-        <meta property="$key" content="${property.get($key)" />
-        #end
-
-        <!-- <meta name="twitter:creator" content="@yk_hirao" /> -->
-    </head>
-    <body></body>
+<html>
+    <body>
+        <table border="1">
+            <tr>
+                <td>name</td>
+                <td>email</td>
+            </tr>
+            #foreach($elem in $inputRoot)
+            <tr>
+                <td>"$elem.name"</td>
+                <td>"$elem.email"</td>
+            </tr>
+            #end
+        </table>
+    </body>
 </html>
