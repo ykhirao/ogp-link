@@ -1,23 +1,23 @@
 {
-    "statusCode": 200,
     "redirectUrl": "https://www.google.com/",
-    "property": [
-        { "key": "og:title", "value": "グーグルへのリンク" },
-        { "key": "og:type", "value": "toppage" },
-        { "key": "og:url", "value": "https://www.google.com/" },
-        {
-            "key": "og:image",
-            "value": "https://i.gyazo.com/58ef1fb88f345866f8144c1b57ca9d38.png"
-        },
-        {
-            "key": "og:description",
-            "value": "グーグルというサイトはとても便利な検索サイトで、さらにアルファベットという組織がさまざまなサービスを展開している。"
-        },
-        { "key": "fb:app_id", "value": "" }
-    ],
+    "id": "1",
     "name": [
-        { "key": "twitter:card", "value": "summary" },
-        { "key": "twitter:site", "value": "@xxx" },
-        { "key": "twitter:creator", "value": "@xxx" }
+        { "k": "twitter:card", "v": "summary" },
+        { "k": "twitter:site", "v": "@xxx" },
+        { "k": "twitter:creator", "v": "@xxx" }
+    ],
+    "property": [
+        { "k": "og:title", "v": "グーグルへのリンク" },
+        { "k": "og:type", "v": "toppage" },
+        { "k": "og:url", "v": "https://www.google.com/" },
+        {
+            "k": "og:image",
+            "v": "https://i.gyazo.com/58ef1fb88f345866f8144c1b57ca9d38.png"
+        },
+        {
+            "k": "og:description",
+            "v": "グーグルというサイトはとても便利な検索サイトで、さらにアルファベットという組織がさまざまなサービスを展開している。"
+        },
+        { "k": "fb:app_id", "v": "sample" }
     ]
 }
