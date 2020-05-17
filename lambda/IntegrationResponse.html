@@ -1,4 +1,6 @@
-#set($url = $input.path('$.Item.redirectUrl.S')))
+#set($url = $input.path('$.Item.redirectUrl.S'))
+#set($names = $input.path('$.Item.name.L'))
+#set($properties = $input.path('$.Item.property.L'))
 
 <!DOCTYPE html>
 <html lang="ja" prefix="og: http://ogp.me/ns#">
@@ -10,22 +12,15 @@
         <!-- *** リダイレクト設定 *********** -->
         <meta http-equiv="refresh" content="0; URL=${url}" />
 
-        <!-- *** 必須項目 *********** -->
-        <meta property="og:title" content="タイトル" />
-        <meta property="og:type" content="toppage is website, or article" />
-        <meta property="og:url" content="url" />
-        <meta property="og:image" content="url" />
+        <!-- name -->
+        #foreach($name in $names)
+        <meta name="$name.M.k.S" content="$name.M.v.S" />
+        #end
 
-        <!-- *** 項目 *********** -->
-        <meta property="og:description" content="Text" />
-
-        <!-- *** Twitter ***************** -->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@yk_hirao" />
-        <meta name="twitter:creator" content="@yk_hirao" />
-
-        <!-- *** Facebook ***************** -->
-        <meta property="fb:app_id" content="App-ID" />
+        <!-- property -->
+        #foreach($property in $properties)
+        <meta property="$property.M.k.S" content="$property.M.v.S" />
+        #end
     </head>
     <body></body>
 </html>
